@@ -1,7 +1,7 @@
 apiVersion: operators.coreos.com/v1alpha1
 kind: ClusterServiceVersion
 metadata:
-  name: hpe-csi-driver-operator.v1.1.0
+  name: hpe-csi-operator.v1.1.0
   namespace: placeholder
   annotations:
     alm-examples: >-
@@ -14,7 +14,6 @@ metadata:
           },
           "spec": {
             "backendType": "nimble",
-            "flavor": "kubernetes",
             "imagePullPolicy": "Always",
             "logLevel": "info",
             "secret": {
@@ -119,11 +118,6 @@ spec:
             path: imagePullPolicy
             x-descriptors:
               - 'urn:alm:descriptor:com.tectonic.ui:imagePullPolicy'
-          - displayName: CO flavor
-            description: 'Flavor of the CO (kubernetes, ocp)'
-            path: flavor
-            x-descriptors:
-              - 'urn:alm:descriptor:com.tectonic.ui:text'
           - displayName: Log level
             description: 'Log level for HPE CSI Driver (trace, debug, warn, info, error)'
             path: logLevel

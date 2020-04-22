@@ -26,13 +26,6 @@ spec:
         options:
           - name: ndots
             value: "1"
-      {{- if eq .Values.flavor "gke"}}
-      tolerations:
-        - effect: NoExecute
-          operator: Exists
-        - effect: NoSchedule
-          operator: Exists
-      {{- end }}
       containers:
         - name: csi-node-driver-registrar
           image: quay.io/k8scsi/csi-node-driver-registrar:v1.1.0

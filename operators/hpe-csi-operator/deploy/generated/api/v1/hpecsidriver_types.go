@@ -33,8 +33,6 @@ type HPECSIDriverSpec struct {
 	Secret HPESecret `json:"secret"`
 	// Image Pull Policy for HPE CSI driver images
 	ImagePullPolicy string `json:"imagePullPolicy"`
-	// Flavor of the CO orchestrator
-	Flavor string `json:"flavor"`
 	// Default logLevel for HPE CSI driver deployments
 	LogLevel string `json:"logLevel"`
 	// BackendType nimble/primera3par for the CSP deployment

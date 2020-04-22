@@ -16,9 +16,6 @@ secret:
   password: admin
   servicePort: "8080"
 
-# flavor
-flavor: kubernetes
-
 # log level for all csi driver components
 logLevel: info
 
